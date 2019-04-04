@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         manager = getSupportFragmentManager();
         usersDataBase = Room.databaseBuilder(this,UsersDataBase.class,"user_database")
-                .allowMainThreadQueries() //TODO : Solve Cannot access database on the main thread since it may potentially lock the UI for a long period of time
+                .allowMainThreadQueries() //TODO : Solve --> Cannot access database on the main thread since it may potentially lock the UI for a long period of time
                 .build();
 
         if (findViewById(R.id.fragment_container)!=null){
