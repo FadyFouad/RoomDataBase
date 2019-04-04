@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static FragmentManager manager ;
+    public static FragmentManager manager ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
