@@ -54,7 +54,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                     .commit();
             break;
             case R.id.btn_update_user:MainActivity.manager.beginTransaction()
-                    .replace(R.id.fragment_container,new ViewUsersFragment())
+                    .replace(R.id.fragment_container,new UpdateFragment())
                     .addToBackStack(null)
                     .commit();
             break;

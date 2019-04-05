@@ -1,6 +1,7 @@
 package com.etatech.roomdatabase;
 
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity (tableName = "Users")
@@ -16,6 +17,7 @@ public class User {
         this.e_mail = e_mail;
     }
 
+    @Ignore
     public User() {
     }
 
