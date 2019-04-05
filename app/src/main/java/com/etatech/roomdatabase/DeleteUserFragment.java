@@ -37,7 +37,7 @@ public class DeleteUserFragment extends Fragment {
                 user.setId(id);
                 MainActivity.usersDataBase.userDao().delete(user);
                 userIdET.setText("");
-                Toast.makeText(getActivity(), "Usre "+user.getName()+" Deleted ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Usre "+user.getId()+" Deleted ", Toast.LENGTH_SHORT).show();
             }
         });
         return view;
