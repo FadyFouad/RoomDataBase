@@ -3,15 +3,20 @@ package com.etatech.roomdatabase;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
+
+import java.util.List;
 
 @Dao
 public interface UserDao {
     @Insert
-    public void insert(User user);
+    void insert(User user);
     @Update
-    public void update(User user);
+    void update(User user);
     @Delete
-    public void delete(User user);
+    void delete(User user);
+    @Query("SELECT * FROM Users")
+    List<User> getUsers();
 
 }

@@ -28,7 +28,9 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_main, container, false);
         Button btnAdd = view.findViewById(R.id.btn_add_user);
+        Button btnView = view.findViewById(R.id.btn_view_user);
         btnAdd.setOnClickListener(this);
+        btnView.setOnClickListener(this);
         return view;
     }
 
@@ -38,6 +40,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btn_add_user:MainActivity.manager.beginTransaction()
                     .replace(R.id.fragment_container,new AddFragment())
+                    .addToBackStack(null)
+                    .commit();
+            break;
+            case R.id.btn_view_user:MainActivity.manager.beginTransaction()
+                    .replace(R.id.fragment_container,new ViewUsersFragment())
                     .addToBackStack(null)
                     .commit();
             break;
