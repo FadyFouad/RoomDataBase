@@ -37,8 +37,9 @@ public class ViewUsersFragment extends Fragment {
             String name = user.getName();
             String mail = user.getE_mail();
             userInfo = "\n id  "+ id + "\n name " + name +  "\n E-mail " + mail ;
+            viewUsers.setText(userInfo);
         }
-        viewUsers.setText(userInfo);
+
         return view ;
     }
 
