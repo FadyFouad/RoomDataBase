@@ -48,6 +48,16 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                     .addToBackStack(null)
                     .commit();
             break;
+            case R.id.btn_delete_user:MainActivity.manager.beginTransaction()
+                    .replace(R.id.fragment_container,new DeleteUserFragment())
+                    .addToBackStack(null)
+                    .commit();
+            break;
+            case R.id.btn_update_user:MainActivity.manager.beginTransaction()
+                    .replace(R.id.fragment_container,new ViewUsersFragment())
+                    .addToBackStack(null)
+                    .commit();
+            break;
         }
 
     }
