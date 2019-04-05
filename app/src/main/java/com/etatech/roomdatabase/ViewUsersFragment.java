@@ -28,15 +28,15 @@ public class ViewUsersFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_users, container, false);
         TextView viewUsers = view.findViewById(R.id.view_users_tv);
-        List<User>users = MainActivity.usersDataBase.userDao().getUsers();
 
+        List<User>users = MainActivity.usersDataBase.userDao().getUsers();
         String userInfo = "";
 
         for (User user : users){
             int id = user.getId();
             String name = user.getName();
             String mail = user.getE_mail();
-            userInfo = "\n id  "+ id + "\n name " + name +  "\n E-mail " + mail ;
+            userInfo = userInfo+"\n id  "+ id + "\n name " + name +  "\n E-mail " + mail ;
             viewUsers.setText(userInfo);
         }
 
