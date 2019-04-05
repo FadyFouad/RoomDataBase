@@ -29,8 +29,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         View view =  inflater.inflate(R.layout.fragment_main, container, false);
         Button btnAdd = view.findViewById(R.id.btn_add_user);
         Button btnView = view.findViewById(R.id.btn_view_user);
+        Button btnDelete = view.findViewById(R.id.btn_delete_user);
+        Button btnUpdate = view.findViewById(R.id.btn_update_user);
         btnAdd.setOnClickListener(this);
         btnView.setOnClickListener(this);
+        btnDelete.setOnClickListener(this);
+        btnUpdate.setOnClickListener(this);
         return view;
     }
 
